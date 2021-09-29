@@ -43,7 +43,7 @@
 export NCCL_DEBUG=INFO
 
 # Training command specification: training_script -args.
-# TRAINING_CMD="unet_training_ddp_slurm_torchlaunch.py"
+# TRAINING_CMD="unet_training_ddp_slurm_torchlaunch.py" # See notes above on other changes needed
 # TRAINING_CMD="unet_training_ddp_slurm.py"
 TRAINING_CMD="unet_training_workflows_slurm.py"
 
