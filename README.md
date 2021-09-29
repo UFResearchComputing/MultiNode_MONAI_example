@@ -36,7 +36,8 @@ We will use the [launch.sh](launch.sh) script to submit the job and launch the m
 
 See the `#SBATCH` lines in [launch.sh](launch.sh) for explanations of the resource requests, GPUs per server, etc.
 
-Thanks to:
+
+## Thanks to:
   * Huiwen Ju, hju@nvidia.com
   * Brian J. Stucky, UF Research Computing (formerly)
   * Matt Gitzendanner, UF Research Computing (some cleanup and documentation)
