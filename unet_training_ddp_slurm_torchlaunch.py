@@ -2,13 +2,13 @@
 This script is adpated from a MONAI tutorial script 
 https://github.com/Project-MONAI/tutorials/blob/master/acceleration/distributed_training/unet_training_ddp.py
 so that can be run mutli-node multi-gpu distributed training (using `torch.distributed.launch`,
-`torch.distributed.DistributedDataParallel` and native PyTorch training loop) on UF HiperGator's AI partition.
+`torch.distributed.DistributedDataParallel` and native PyTorch training loop) on UF HiPerGator's AI partition.
 To use PyTorch.ignite/MONAI workflows instead of native PyTorch training loop, see sample script `unet_training_workflows_slurm.py`.
 
 How to launch this script:
 - See sample SLURM batch script `launch.sh` (also helper scripts `run_on_node.sh` & `pt_multinode_helper_funcs.sh`), 
 which can launch a PyTorch/MONAI script with or without using `torch.distributed.launch` on 
-a SLURM cluster like HiperGator using Singularity as container runtime. This script is for launching with 
+a SLURM cluster like HiPerGator using Singularity as container runtime. This script is for launching with 
 `torch.distributed.launch`. In run_on_node.sh, call `torch.distributed.launch` to spawn processes on every node. 
 Sample script `unet_training_ddp_slurm.py` is for launching without `torch.distributed.launch`. 
 - See sample output unet_training_ddp_slurm_torchlaunch.out
