@@ -21,6 +21,12 @@ For this tutorial, everything is expected to be in the same folder. On HiPerGato
 
 For this example we will use the PyTorch 21.07 base container, building that with the command: `singularity build --sandbox pyt21.07/ docker://nvcr.io/nvidia/pytorch:21.07-py3`
 
+> **Note**: When running the Singularity container, you will likely get *many* warnings about more than 50 bind mounts. e.g.:
+>
+> ```WARNING: underlay of /usr/bin/nvidia-smi required more than 50 (473) bind mounts```
+>
+>These are mostly harmless and can be ignored. You can try using `singularity -s` to silence the warnings, but other warnings may also be silenced.
+
 ### Add in MONAI and dependancies
 
 In addition to the base container, for this example, we need the [MONAI package](https://monai.io/) and dependancies. These are added to the container we built above (called `pyt21.07`) using the following commands in the script.
