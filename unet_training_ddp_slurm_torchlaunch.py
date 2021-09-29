@@ -11,7 +11,7 @@ which can launch a PyTorch/MONAI script with or without using `torch.distributed
 a SLURM cluster like HiPerGator using Singularity as container runtime. This script is for launching with 
 `torch.distributed.launch`. In run_on_node.sh, call `torch.distributed.launch` to spawn processes on every node. 
 Sample script `unet_training_ddp_slurm.py` is for launching without `torch.distributed.launch`. 
-- See sample output unet_training_ddp_slurm_torchlaunch.out
+- See sample output sample_outfiles/unet_training_ddp_slurm_torchlaunch.out
 
 
 Steps to use `torch.distributed.DistributedDataParallel` in this script:

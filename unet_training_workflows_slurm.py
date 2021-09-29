@@ -12,7 +12,7 @@ How to launch this script:
 which can launch a PyTorch/MONAI script with or without using `torch.distributed.launch` on 
 a SLURM cluster like HiPerGator using Singularity as container runtime. This script is for launching without 
 `torch.distributed.launch`. Currently, this script can't be launched by `torch.distributed.launch` on HiPerGator. 
-- See sample output unet_training_workflows_slurm.out
+- See sample output sample_outfiles/unet_training_workflows_slurm.out
 
 
 Steps to use `torch.distributed.DistributedDataParallel` in this script:
