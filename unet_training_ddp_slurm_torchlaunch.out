@@ -1,0 +1,599 @@
+/home/hju/pt_dist_launch/UF_tutorial_multinode_MONAI
+c1007a-s35.ufhpc
+Fri Sep 24 19:59:16 EDT 2021
+Primary node: c1007a-s35
+Primary TCP port: 20605
+Secondary nodes: c1009a-s35
+Running "/home/hju/pt_dist_launch/UF_tutorial_multinode_MONAI/unet_training_ddp_slurm_torchlaunch.py" on each node...
+[33mWARNING:[0m underlay of /etc/localtime required more than 50 (92) bind mounts
+[33mWARNING:[0m underlay of /usr/bin/nvidia-smi required more than 50 (473) bind mounts
+[33mWARNING:[0m underlay of /etc/localtime required more than 50 (92) bind mounts
+[33mWARNING:[0m underlay of /usr/bin/nvidia-smi required more than 50 (473) bind mounts
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+rm: cannot remove '/usr/local/cuda/compat/lib': Read-only file system
+The module torch.distributed.launch is deprecated and going to be removed in future.Migrate to torch.distributed.run
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+WARNING:torch.distributed.run:--use_env is deprecated and will be removed in future releases.
+ Please read local_rank from `os.environ('LOCAL_RANK')` instead.
+INFO:torch.distributed.launcher.api:Starting elastic_operator with launch configs:
+  entrypoint       : /home/hju/pt_dist_launch/UF_tutorial_multinode_MONAI/unet_training_ddp_slurm_torchlaunch.py
+  min_nodes        : 2
+  max_nodes        : 2
+  nproc_per_node   : 8
+  run_id           : none
+  rdzv_backend     : static
+  rdzv_endpoint    : c1007a-s35:20605
+  rdzv_configs     : {'rank': 0, 'timeout': 900}
+  max_restarts     : 3
+  monitor_interval : 5
+  log_dir          : None
+  metrics_cfg      : {}
+
+INFO:torch.distributed.elastic.agent.server.local_elastic_agent:log directory set to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p
+INFO:torch.distributed.elastic.agent.server.api:[default] starting workers for entrypoint: python3
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous'ing worker group
+The module torch.distributed.launch is deprecated and going to be removed in future.Migrate to torch.distributed.run
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+WARNING:torch.distributed.run:--use_env is deprecated and will be removed in future releases.
+ Please read local_rank from `os.environ('LOCAL_RANK')` instead.
+INFO:torch.distributed.launcher.api:Starting elastic_operator with launch configs:
+  entrypoint       : /home/hju/pt_dist_launch/UF_tutorial_multinode_MONAI/unet_training_ddp_slurm_torchlaunch.py
+  min_nodes        : 2
+  max_nodes        : 2
+  nproc_per_node   : 8
+  run_id           : none
+  rdzv_backend     : static
+  rdzv_endpoint    : c1007a-s35:20605
+  rdzv_configs     : {'rank': 1, 'timeout': 900}
+  max_restarts     : 3
+  monitor_interval : 5
+  log_dir          : None
+  metrics_cfg      : {}
+
+INFO:torch.distributed.elastic.agent.server.local_elastic_agent:log directory set to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i
+INFO:torch.distributed.elastic.agent.server.api:[default] starting workers for entrypoint: python3
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous'ing worker group
+/opt/conda/lib/python3.8/site-packages/torch/distributed/elastic/utils/store.py:52: FutureWarning: This is an experimental API and will be changed in future.
+  warnings.warn(
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous complete for workers. Result:
+  restart_count=0
+  master_addr=c1007a-s35
+  master_port=20605
+  group_rank=0
+  group_world_size=2
+  local_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  global_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_world_sizes=[16, 16, 16, 16, 16, 16, 16, 16]
+  global_world_sizes=[16, 16, 16, 16, 16, 16, 16, 16]
+
+INFO:torch.distributed.elastic.agent.server.api:[default] Starting worker group
+INFO:torch.distributed.elastic.multiprocessing:Setting worker0 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/0/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker1 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/1/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker2 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/2/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker3 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/3/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker4 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/4/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker5 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/5/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker6 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/6/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker7 reply file to: /scratch/local/9130480/torchelastic_4upabx5l/none_3qiw5t6p/attempt_0/7/error.json
+/opt/conda/lib/python3.8/site-packages/torch/distributed/elastic/utils/store.py:52: FutureWarning: This is an experimental API and will be changed in future.
+  warnings.warn(
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous complete for workers. Result:
+  restart_count=0
+  master_addr=c1007a-s35
+  master_port=20605
+  group_rank=1
+  group_world_size=2
+  local_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_ranks=[8, 9, 10, 11, 12, 13, 14, 15]
+  global_ranks=[8, 9, 10, 11, 12, 13, 14, 15]
+  role_world_sizes=[16, 16, 16, 16, 16, 16, 16, 16]
+  global_world_sizes=[16, 16, 16, 16, 16, 16, 16, 16]
+
+INFO:torch.distributed.elastic.agent.server.api:[default] Starting worker group
+INFO:torch.distributed.elastic.multiprocessing:Setting worker0 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/0/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker1 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/1/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker2 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/2/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker3 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/3/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker4 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/4/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker5 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/5/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker6 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/6/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker7 reply file to: /scratch/local/9130480/torchelastic_tmmwuict/none_tljnl45i/attempt_0/7/error.json
+[0] generating synthetic data to ./testdata (this may take a while)
+NCCL version 2.10.3+cuda11.4
+[0] ---------- epoch 1/5
+[8] ---------- epoch 1/5
+[15] ---------- epoch 1/5
+[6] ---------- epoch 1/5
+[3] ---------- epoch 1/5
+[7] ---------- epoch 1/5
+[2] ---------- epoch 1/5
+[5] ---------- epoch 1/5
+[1] ---------- epoch 1/5
+[4] ---------- epoch 1/5
+[14] ---------- epoch 1/5
+[10] ---------- epoch 1/5
+[12] ---------- epoch 1/5
+[13] ---------- epoch 1/5
+[9] ---------- epoch 1/5
+[11] ---------- epoch 1/5
+[10] 1/32, train_loss: 0.7639
+[15] 1/32, train_loss: 0.6485
+[11] 1/32, train_loss: 0.6244
+[12] 1/32, train_loss: 0.6428
+[14] 1/32, train_loss: 0.6779
+[8] 1/32, train_loss: 0.6935
+[13] 1/32, train_loss: 0.6623
+[9] 1/32, train_loss: 0.6685
+[3] 1/32, train_loss: 0.7029
+[2] 1/32, train_loss: 0.7136
+[7] 1/32, train_loss: 0.6413
+[1] 1/32, train_loss: 0.6660
+[4] 1/32, train_loss: 0.6571
+[5] 1/32, train_loss: 0.6235
+[0] 1/32, train_loss: 0.6691
+[6] 1/32, train_loss: 0.7335
+[3] 2/32, train_loss: 0.7469
+[2] 2/32, train_loss: 0.5990
+[1] 2/32, train_loss: 0.6617
+[7] 2/32, train_loss: 0.5896[0] 2/32, train_loss: 0.5750
+
+[6] 2/32, train_loss: 0.5969
+[5] 2/32, train_loss: 0.6168
+[4] 2/32, train_loss: 0.6740
+[8] 2/32, train_loss: 0.5748
+[15] 2/32, train_loss: 0.6163[10] 2/32, train_loss: 0.6409
+
+[11] 2/32, train_loss: 0.6201
+[9] 2/32, train_loss: 0.6597
+[14] 2/32, train_loss: 0.6340
+[13] 2/32, train_loss: 0.6577
+[12] 2/32, train_loss: 0.6276
+[15] epoch 1, average loss: 0.6324
+[15] ---------- epoch 2/5
+[6] epoch 1, average loss: 0.6652
+[6] ---------- epoch 2/5
+[14] epoch 1, average loss: 0.6559
+[14] ---------- epoch 2/5
+[10] epoch 1, average loss: 0.7024
+[10] ---------- epoch 2/5
+[0] epoch 1, average loss: 0.6221
+[0] ---------- epoch 2/5
+[3] epoch 1, average loss: 0.7249
+[3] ---------- epoch 2/5
+[4] epoch 1, average loss: 0.6656
+[4] ---------- epoch 2/5
+[1] epoch 1, average loss: 0.6639
+[7] epoch 1, average loss: 0.6155
+[1] ---------- epoch 2/5
+[7] ---------- epoch 2/5
+[8] epoch 1, average loss: 0.6342
+[8] ---------- epoch 2/5
+[11] epoch 1, average loss: 0.6223
+[11] ---------- epoch 2/5
+[2] epoch 1, average loss: 0.6563
+[2] ---------- epoch 2/5
+[13] epoch 1, average loss: 0.6600
+[5] epoch 1, average loss: 0.6201[13] ---------- epoch 2/5
+[9] epoch 1, average loss: 0.6641
+[9] ---------- epoch 2/5
+[12] epoch 1, average loss: 0.6352
+[5] ---------- epoch 2/5
+
+[12] ---------- epoch 2/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[1] 1/32, train_loss: 0.5516
+[3] 1/32, train_loss: 0.6405
+[2] 1/32, train_loss: 0.6247[0] 1/32, train_loss: 0.6083[5] 1/32, train_loss: 0.6361
+
+
+[15] 1/32, train_loss: 0.6248
+[8] 1/32, train_loss: 0.5833
+[12] 1/32, train_loss: 0.5962
+[10] 1/32, train_loss: 0.6917
+[9] 1/32, train_loss: 0.6072[11] 1/32, train_loss: 0.5936
+
+[13] 1/32, train_loss: 0.5975
+[14] 1/32, train_loss: 0.6084
+[6] 1/32, train_loss: 0.5895[4] 1/32, train_loss: 0.6167
+
+[7] 1/32, train_loss: 0.6919
+[10] 2/32, train_loss: 0.5740
+[15] 2/32, train_loss: 0.5188[8] 2/32, train_loss: 0.6091
+[11] 2/32, train_loss: 0.5493
+
+[12] 2/32, train_loss: 0.6077
+[14] 2/32, train_loss: 0.6228
+[3] 2/32, train_loss: 0.5946[2] 2/32, train_loss: 0.6247
+
+[1] 2/32, train_loss: 0.5583
+[4] 2/32, train_loss: 0.5600[5] 2/32, train_loss: 0.6106
+
+[0] 2/32, train_loss: 0.6245
+[7] 2/32, train_loss: 0.6690
+[6] 2/32, train_loss: 0.6287
+[13] 2/32, train_loss: 0.5797
+[9] 2/32, train_loss: 0.5324
+[10] epoch 2, average loss: 0.6328
+[10] ---------- epoch 3/5
+[9] epoch 2, average loss: 0.5698
+[9] ---------- epoch 3/5
+[14] epoch 2, average loss: 0.6156
+[14] ---------- epoch 3/5
+[5] epoch 2, average loss: 0.6234
+[5] ---------- epoch 3/5
+[1] epoch 2, average loss: 0.5549
+[1] ---------- epoch 3/5
+[15] epoch 2, average loss: 0.5718
+[15] ---------- epoch 3/5
+[4] epoch 2, average loss: 0.5884
+[4] ---------- epoch 3/5
+[0] epoch 2, average loss: 0.6164
+[0] ---------- epoch 3/5
+[8] epoch 2, average loss: 0.5962
+[8] ---------- epoch 3/5
+[7] epoch 2, average loss: 0.6805
+[7] ---------- epoch 3/5
+[3] epoch 2, average loss: 0.6175
+[3] ---------- epoch 3/5
+[2] epoch 2, average loss: 0.6247
+[2] ---------- epoch 3/5
+[13] epoch 2, average loss: 0.5886
+[13] ---------- epoch 3/5
+[12] epoch 2, average loss: 0.6020
+[12] ---------- epoch 3/5
+[11] epoch 2, average loss: 0.5715
+[11] ---------- epoch 3/5
+[6] epoch 2, average loss: 0.6091[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+
+[6] ---------- epoch 3/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[3] 1/32, train_loss: 0.5544
+[5] 1/32, train_loss: 0.6014
+[1] 1/32, train_loss: 0.5810
+[0] 1/32, train_loss: 0.6014
+[2] 1/32, train_loss: 0.5888
+[11] 1/32, train_loss: 0.5350
+[15] 1/32, train_loss: 0.5940[13] 1/32, train_loss: 0.5747
+
+[10] 1/32, train_loss: 0.6065
+[12] 1/32, train_loss: 0.5993
+[8] 1/32, train_loss: 0.5747
+[14] 1/32, train_loss: 0.6140
+[9] 1/32, train_loss: 0.5155
+[6] 1/32, train_loss: 0.6026[4] 1/32, train_loss: 0.5770
+
+[7] 1/32, train_loss: 0.5920
+[13] 2/32, train_loss: 0.5910
+[15] 2/32, train_loss: 0.5977[10] 2/32, train_loss: 0.5469
+
+[11] 2/32, train_loss: 0.5420
+[9] 2/32, train_loss: 0.5948
+[12] 2/32, train_loss: 0.5622
+[14] 2/32, train_loss: 0.5577
+[3] 2/32, train_loss: 0.5368[5] 2/32, train_loss: 0.6844
+[2] 2/32, train_loss: 0.5349
+
+[1] 2/32, train_loss: 0.5569
+[0] 2/32, train_loss: 0.5315
+[7] 2/32, train_loss: 0.5574
+[6] 2/32, train_loss: 0.6428
+[4] 2/32, train_loss: 0.5534
+[8] 2/32, train_loss: 0.5679
+[5] epoch 3, average loss: 0.6429
+[5] ---------- epoch 4/5
+[13] epoch 3, average loss: 0.5828
+[13] ---------- epoch 4/5
+[10] epoch 3, average loss: 0.5767
+[10] ---------- epoch 4/5
+[11] epoch 3, average loss: 0.5385
+[11] ---------- epoch 4/5
+[0] epoch 3, average loss: 0.5665
+[0] ---------- epoch 4/5
+[15] epoch 3, average loss: 0.5959[4] epoch 3, average loss: 0.5652
+[4] ---------- epoch 4/5
+
+[15] ---------- epoch 4/5
+[9] epoch 3, average loss: 0.5552
+[9] ---------- epoch 4/5
+[3] epoch 3, average loss: 0.5456
+[3] ---------- epoch 4/5
+[2] epoch 3, average loss: 0.5619
+[2] ---------- epoch 4/5
+[1] epoch 3, average loss: 0.5690
+[1] ---------- epoch 4/5
+[14] epoch 3, average loss: 0.5859
+[14] ---------- epoch 4/5
+[12] epoch 3, average loss: 0.5808
+[12] ---------- epoch 4/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[6] epoch 3, average loss: 0.6227[8] epoch 3, average loss: 0.5713
+[8] ---------- epoch 4/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+
+[6] ---------- epoch 4/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[7] epoch 3, average loss: 0.5747
+[7] ---------- epoch 4/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[2] 1/32, train_loss: 0.6466
+[1] 1/32, train_loss: 0.5579
+[3] 1/32, train_loss: 0.6544
+[6] 1/32, train_loss: 0.5451[4] 1/32, train_loss: 0.5428
+
+[5] 1/32, train_loss: 0.5441
+[0] 1/32, train_loss: 0.5863
+[7] 1/32, train_loss: 0.5782
+[13] 1/32, train_loss: 0.5639
+[12] 1/32, train_loss: 0.5973
+[8] 1/32, train_loss: 0.5526
+[10] 1/32, train_loss: 0.5164
+[9] 1/32, train_loss: 0.5271
+[11] 1/32, train_loss: 0.5638[15] 1/32, train_loss: 0.5911
+
+[14] 1/32, train_loss: 0.5419
+[3] 2/32, train_loss: 0.5363[5] 2/32, train_loss: 0.5474
+
+[4] 2/32, train_loss: 0.5636
+[1] 2/32, train_loss: 0.6184
+[2] 2/32, train_loss: 0.5028[0] 2/32, train_loss: 0.5420
+
+[7] 2/32, train_loss: 0.5558
+[6] 2/32, train_loss: 0.5347
+[10] 2/32, train_loss: 0.5894
+[13] 2/32, train_loss: 0.6097[15] 2/32, train_loss: 0.5496
+
+[12] 2/32, train_loss: 0.6053
+[14] 2/32, train_loss: 0.5412
+[8] 2/32, train_loss: 0.5577
+[9] 2/32, train_loss: 0.5419
+[11] 2/32, train_loss: 0.5391
+[10] epoch 4, average loss: 0.5529
+[10] ---------- epoch 5/5
+[14] epoch 4, average loss: 0.5416
+[14] ---------- epoch 5/5
+[5] epoch 4, average loss: 0.5457
+[5] ---------- epoch 5/5
+[6] epoch 4, average loss: 0.5399
+[6] ---------- epoch 5/5
+[4] epoch 4, average loss: 0.5532[13] epoch 4, average loss: 0.5868
+[13] ---------- epoch 5/5
+[0] epoch 4, average loss: 0.5641
+
+[4] ---------- epoch 5/5[0] ---------- epoch 5/5
+
+[2] epoch 4, average loss: 0.5747
+[2] ---------- epoch 5/5
+[7] epoch 4, average loss: 0.5670
+[7] ---------- epoch 5/5
+[1] epoch 4, average loss: 0.5881
+[1] ---------- epoch 5/5
+[3] epoch 4, average loss: 0.5954[9] epoch 4, average loss: 0.5345[8] epoch 4, average loss: 0.5551
+[3] ---------- epoch 5/5
+
+[9] ---------- epoch 5/5
+
+[8] ---------- epoch 5/5
+[12] epoch 4, average loss: 0.6013
+[12] ---------- epoch 5/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[15] epoch 4, average loss: 0.5703
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[15] ---------- epoch 5/5
+[11] epoch 4, average loss: 0.5515
+[11] ---------- epoch 5/5
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:99] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[15] 1/32, train_loss: 0.5594
+[11] 1/32, train_loss: 0.6469
+[9] 1/32, train_loss: 0.5888
+[13] 1/32, train_loss: 0.4918
+[3] 1/32, train_loss: 0.5459[2] 1/32, train_loss: 0.5385
+
+[5] 1/32, train_loss: 0.5116
+[7] 1/32, train_loss: 0.5222[1] 1/32, train_loss: 0.6122
+
+[0] 1/32, train_loss: 0.5567
+[4] 1/32, train_loss: 0.6055[6] 1/32, train_loss: 0.5489
+
+[12] 1/32, train_loss: 0.5257
+[14] 1/32, train_loss: 0.5217
+[10] 1/32, train_loss: 0.5342
+[8] 1/32, train_loss: 0.4814
+[3] 2/32, train_loss: 0.5405[5] 2/32, train_loss: 0.5515
+
+[2] 2/32, train_loss: 0.5821
+[4] 2/32, train_loss: 0.4999
+[1] 2/32, train_loss: 0.5910
+[0] 2/32, train_loss: 0.5485
+[7] 2/32, train_loss: 0.5298
+[6] 2/32, train_loss: 0.5498
+[8] 2/32, train_loss: 0.5559
+[15] 2/32, train_loss: 0.5197
+[13] 2/32, train_loss: 0.5913
+[11] 2/32, train_loss: 0.5202
+[9] 2/32, train_loss: 0.5623
+[14] 2/32, train_loss: 0.5808
+[12] 2/32, train_loss: 0.5623
+[10] 2/32, train_loss: 0.5142
+[15] epoch 5, average loss: 0.5396
+[15] train completed, epoch losses: [0.632417768239975, 0.5717880129814148, 0.595870852470398, 0.5703479051589966, 0.5395767092704773]
+[6] epoch 5, average loss: 0.5493
+[6] train completed, epoch losses: [0.6652451455593109, 0.6091086566448212, 0.6226977407932281, 0.5399322509765625, 0.5493366420269012]
+[13] epoch 5, average loss: 0.5416
+[13] train completed, epoch losses: [0.6600347459316254, 0.5885565280914307, 0.5828345417976379, 0.5868063569068909, 0.5415795594453812]
+[11] epoch 5, average loss: 0.5835
+[11] train completed, epoch losses: [0.6222586929798126, 0.5714597105979919, 0.5384722352027893, 0.5514687299728394, 0.583541214466095]
+[4] epoch 5, average loss: 0.5527
+[4] train completed, epoch losses: [0.6655672788619995, 0.588369756937027, 0.5651637315750122, 0.5531812310218811, 0.5526779294013977]
+[1] epoch 5, average loss: 0.6016
+[1] train completed, epoch losses: [0.6638725399971008, 0.554935097694397, 0.5689724683761597, 0.5881486535072327, 0.6015930771827698]
+[14] epoch 5, average loss: 0.5513
+[14] train completed, epoch losses: [0.6559484899044037, 0.615576982498169, 0.5858602821826935, 0.5415758490562439, 0.5512637794017792]
+[0] epoch 5, average loss: 0.5526
+[0] train completed, epoch losses: [0.6220510601997375, 0.6164355874061584, 0.5664680600166321, 0.5641418993473053, 0.5526038110256195]
+[2] epoch 5, average loss: 0.5603
+[2] train completed, epoch losses: [0.6563036143779755, 0.624666303396225, 0.5618653893470764, 0.5747070908546448, 0.5603042542934418]
+[10] epoch 5, average loss: 0.5242
+[10] train completed, epoch losses: [0.7024101316928864, 0.6328333020210266, 0.5766901969909668, 0.552918553352356, 0.5241737365722656]
+[12] epoch 5, average loss: 0.5440
+[7] epoch 5, average loss: 0.5260[12] train completed, epoch losses: [0.6351842880249023, 0.6019664406776428, 0.5807605981826782, 0.6013256311416626, 0.5440123379230499]
+
+[7] train completed, epoch losses: [0.6154800951480865, 0.6804567277431488, 0.5747261643409729, 0.5669954419136047, 0.525993674993515]
+[5] epoch 5, average loss: 0.5316
+[5] train completed, epoch losses: [0.620145857334137, 0.6233575940132141, 0.6428834199905396, 0.5457343459129333, 0.5315546095371246]
+[8] epoch 5, average loss: 0.5186
+[8] train completed, epoch losses: [0.6341759562492371, 0.5961900055408478, 0.5712725520133972, 0.5551144778728485, 0.5186124444007874]
+[3] epoch 5, average loss: 0.5432
+[3] train completed, epoch losses: [0.7248971462249756, 0.6175312697887421, 0.5456251502037048, 0.5953614711761475, 0.5431875288486481]
+[9] epoch 5, average loss: 0.5755
+[9] train completed, epoch losses: [0.6640777289867401, 0.5698003470897675, 0.5551668703556061, 0.5345351099967957, 0.5755473971366882]
+INFO:torch.distributed.elastic.agent.server.api:[default] worker group successfully finished. Waiting 300 seconds for other agents to finish.
+INFO:torch.distributed.elastic.agent.server.api:Local worker group finished (SUCCEEDED). Waiting 300 seconds for other agents to finish
+INFO:torch.distributed.elastic.agent.server.api:[default] worker group successfully finished. Waiting 300 seconds for other agents to finish.
+INFO:torch.distributed.elastic.agent.server.api:Local worker group finished (SUCCEEDED). Waiting 300 seconds for other agents to finish
+/opt/conda/lib/python3.8/site-packages/torch/distributed/elastic/utils/store.py:70: FutureWarning: This is an experimental API and will be changed in future.
+  warnings.warn(
+INFO:torch.distributed.elastic.agent.server.api:Done waiting for other agents. Elapsed: 0.0011739730834960938 seconds
+/opt/conda/lib/python3.8/site-packages/torch/distributed/elastic/utils/store.py:70: FutureWarning: This is an experimental API and will be changed in future.
+  warnings.warn(
+INFO:torch.distributed.elastic.agent.server.api:Done waiting for other agents. Elapsed: 0.001123189926147461 seconds
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 0, "group_rank": 0, "worker_id": "185462", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [0], \"role_rank\": [0], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 1, "group_rank": 0, "worker_id": "185463", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [1], \"role_rank\": [1], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 2, "group_rank": 0, "worker_id": "185464", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [2], \"role_rank\": [2], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 3, "group_rank": 0, "worker_id": "185465", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [3], \"role_rank\": [3], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 4, "group_rank": 0, "worker_id": "185466", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [4], \"role_rank\": [4], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 5, "group_rank": 0, "worker_id": "185467", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [5], \"role_rank\": [5], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 6, "group_rank": 0, "worker_id": "185468", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [6], \"role_rank\": [6], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 7, "group_rank": 0, "worker_id": "185469", "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [7], \"role_rank\": [7], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "AGENT", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": null, "group_rank": 0, "worker_id": null, "role": "default", "hostname": "c1007a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\"}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 8, "group_rank": 1, "worker_id": "96104", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [0], \"role_rank\": [8], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 9, "group_rank": 1, "worker_id": "96105", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [1], \"role_rank\": [9], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 10, "group_rank": 1, "worker_id": "96106", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [2], \"role_rank\": [10], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 11, "group_rank": 1, "worker_id": "96107", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [3], \"role_rank\": [11], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 12, "group_rank": 1, "worker_id": "96108", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [4], \"role_rank\": [12], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 13, "group_rank": 1, "worker_id": "96109", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [5], \"role_rank\": [13], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 14, "group_rank": 1, "worker_id": "96110", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [6], \"role_rank\": [14], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "WORKER", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": 15, "group_rank": 1, "worker_id": "96111", "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\", \"local_rank\": [7], \"role_rank\": [15], \"role_world_size\": [16]}", "agent_restarts": 0}}
+{"name": "torchelastic.worker.status.SUCCEEDED", "source": "AGENT", "timestamp": 0, "metadata": {"run_id": "none", "global_rank": null, "group_rank": 1, "worker_id": null, "role": "default", "hostname": "c1009a-s35.ufhpc", "state": "SUCCEEDED", "total_run_time": 40, "rdzv_backend": "static", "raw_error": null, "metadata": "{\"group_world_size\": 2, \"entry_point\": \"python3\"}", "agent_restarts": 0}}
