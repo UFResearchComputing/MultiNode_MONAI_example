@@ -45,5 +45,7 @@ See the `#SBATCH` lines in [launch.sh](launch.sh) for explanations of the resour
 
 ## Thanks to:
   * Huiwen Ju, hju@nvidia.com
-  * Brian J. Stucky, UF Research Computing (formerly)
+  * Dimitri Bourilkov, UF Research Computing (HiPerGator installations: server/client)
+  * Justin Richardson, UF Research Computing (OOD Graphics)
   * Matt Gitzendanner, UF Research Computing (some cleanup and documentation)
+  * Brian J. Stucky, UF Research Computing (formerly)
